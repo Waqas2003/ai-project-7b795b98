@@ -1,0 +1,15 @@
+{
+  "name": "Live Preview",
+  "postCreateCommand": "npm install && npm start || python3 main.py || uvicorn main:app --reload",
+  "forwardPorts": [3000, 8501],
+  "portsAttributes": {
+    "3000": {
+      "label": "Web Preview",
+      "onAutoForward": "openPreview"
+    },
+    "8501": {
+      "label": "Streamlit",
+      "onAutoForward": "openPreview"
+    }
+  }
+}
